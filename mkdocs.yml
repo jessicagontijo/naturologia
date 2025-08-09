@@ -1,4 +1,4 @@
-site_name: Jéssica Gontijo ○ Naturologia e Ayurveda
+site_name: ○ Naturologia e Ayurveda
 site_url: https://jessicagontijo.com
 site_description: Tratamento natural para sintomas do climatério e menopausa. Utilize a medicina ayurveda e práticas integrativas para recuperar equilíbrio, bem-estar e qualidade de vida.
 
@@ -6,20 +6,10 @@ theme:
   name: material
   language: pt-BR
   palette:
-    # Paleta principal (clara)
-    - scheme: default
-      primary: teal
-      accent: pink
-      toggle:
-        icon: material/brightness-7
-        name: Alternar para modo escuro
-    # Paleta escura (opcional)
-    - scheme: slate
-      primary: teal
-      accent: pink
-      toggle:
-        icon: material/brightness-4
-        name: Alternar para modo claro
+    # Apenas modo claro
+    scheme: default
+    primary: brown
+    accent: deep orange
   
   font:
     text: PT Serif
@@ -29,7 +19,7 @@ theme:
     - navigation.instant
     - navigation.instant.prefetch
     - navigation.tracking
-    - navigation.top
+    - header.autohide
     - search.highlight
     - search.suggest
     - content.code.copy
@@ -38,7 +28,8 @@ theme:
     - toc.integrate
 
   icon:
-    repo: fontawesome/brands/github
+    logo: material/leaf
+  favicon: assets/images/favicon.png
 
 plugins:
   - search:
@@ -82,6 +73,9 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
+
+extra_css:
+  - assets/stylesheets/extra.css
 
 extra:
   social:
