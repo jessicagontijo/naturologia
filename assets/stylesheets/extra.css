@@ -1,0 +1,381 @@
+/* Estilos customizados para o site da Jéssica Gontijo */
+
+/* ===== PALETA DE CORES PERSONALIZADA ===== */
+:root {
+  /* Cores do site original da Jéssica Gontijo */
+  --custom-primary: #e5e3dd;        /* Cor primária (bege claro) */
+  --custom-accent: #d8ad99;         /* Cor de destaque (rosé/salmão) */
+  --custom-light-accent: #ffffff;   /* Accent claro (branco) */
+  --custom-dark-bg: #495a58;        /* Fundo escuro (verde acinzentado) */
+  --custom-white: #ffffff;          /* Branco */
+  --custom-black: #000000;          /* Preto */
+  --custom-text: #333333;           /* Cor do texto principal */
+  --custom-text-light: #666666;     /* Texto mais claro */
+  
+  /* Sobrescrevendo variáveis do Material Theme */
+  --md-primary-fg-color: var(--custom-accent);
+  --md-primary-fg-color--light: var(--custom-primary);
+  --md-primary-fg-color--dark: var(--custom-dark-bg);
+  --md-accent-fg-color: var(--custom-accent);
+  --md-accent-fg-color--transparent: rgba(216, 173, 153, 0.1);
+  
+  /* Cores de texto */
+  --md-default-fg-color: var(--custom-text);
+  --md-default-fg-color--light: var(--custom-text-light);
+  --md-default-fg-color--lighter: rgba(51, 51, 51, 0.32);
+  --md-default-fg-color--lightest: rgba(51, 51, 51, 0.07);
+  
+  /* Cores de fundo */
+  --md-default-bg-color: var(--custom-white);
+  --md-code-bg-color: var(--custom-primary);
+  
+  /* Cores para admonitions */
+  --md-admonition-bg-color: rgba(229, 227, 221, 0.1);
+  --md-admonition-fg-color: var(--custom-text);
+}
+
+/* Seção Hero */
+.hero-section {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.hero-section img {
+    max-width: 300px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.hero-image {
+    float: right;
+    margin: -1rem 0 1rem 1.5rem;
+    max-width: 180px;
+    width: 180px;
+}
+
+.hero-image img {
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease;
+    width: 100%;
+    height: auto;
+}
+
+.hero-image img:hover {
+    transform: scale(1.03);
+}
+
+/* Seção Sobre */
+.about-section {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    margin: 2rem 0;
+}
+
+.about-image {
+    flex: 0 0 300px;
+}
+
+.about-image img {
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    width: 100%;
+    height: auto;
+}
+
+.about-content {
+    flex: 1;
+    padding-left: 1rem;
+}
+
+.about-content h3 {
+    margin-top: 0;
+    color: var(--md-primary-fg-color);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero-image {
+        float: none;
+        margin: 1rem auto;
+        display: block;
+        text-align: center;
+        max-width: 150px;
+        width: 150px;
+    }
+    
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .about-image {
+        flex: none;
+        max-width: 250px;
+        margin: 0 auto;
+    }
+    
+    .about-content {
+        padding-left: 0;
+        margin-top: 1rem;
+    }
+}
+
+/* ===== ESTILOS COM PALETA PERSONALIZADA ===== */
+
+/* Admonitions personalizados */
+.md-typeset .admonition.tip {
+    border-left-color: var(--custom-accent);
+    background-color: rgba(216, 173, 153, 0.05);
+}
+
+.md-typeset .admonition.tip .admonition-title {
+    background-color: rgba(216, 173, 153, 0.1);
+    color: var(--custom-dark-bg);
+}
+
+.md-typeset .admonition.quote {
+    border-left-color: var(--custom-accent);
+    background-color: rgba(229, 227, 221, 0.3);
+}
+
+.md-typeset .admonition.quote .admonition-title {
+    background-color: var(--custom-primary);
+    color: var(--custom-dark-bg);
+}
+
+.md-typeset .admonition.info {
+    border-left-color: var(--custom-dark-bg);
+    background-color: rgba(73, 90, 88, 0.05);
+}
+
+.md-typeset .admonition.info .admonition-title {
+    background-color: rgba(73, 90, 88, 0.1);
+    color: var(--custom-dark-bg);
+}
+
+/* Botões personalizados */
+.md-button {
+    transition: all 0.3s ease;
+    background-color: var(--custom-accent);
+    color: white;
+    border: none;
+}
+
+.md-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(216, 173, 153, 0.3);
+    background-color: var(--custom-dark-bg);
+}
+
+.md-button--primary {
+    background-color: var(--custom-accent);
+    color: white;
+}
+
+.md-button--primary:hover {
+    background-color: var(--custom-dark-bg);
+}
+
+/* Headers personalizados */
+.md-typeset h1 {
+    color: var(--custom-dark-bg);
+}
+
+.md-typeset h2 {
+    color: var(--custom-accent);
+    border-bottom: 2px solid var(--custom-primary);
+    padding-bottom: 0.5rem;
+}
+
+.md-typeset h3 {
+    color: var(--custom-dark-bg);
+}
+
+/* Links personalizados */
+.md-typeset a {
+    color: var(--custom-accent);
+}
+
+.md-typeset a:hover {
+    color: var(--custom-dark-bg);
+}
+
+/* Separadores das seções */
+.md-content__inner > hr {
+    margin: 3rem 0;
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--custom-accent), transparent);
+}
+
+/* Footer personalizado */
+.md-footer {
+    background-color: var(--custom-dark-bg);
+    color: var(--custom-white);
+}
+
+/* Header personalizado */
+.md-header {
+    background-color: var(--custom-primary);
+    color: var(--custom-dark-bg);
+}
+
+.md-header__title {
+    color: var(--custom-dark-bg);
+}
+
+/* Ícone personalizado no header */
+.md-header__button.md-logo {
+    margin: 0.4rem;
+}
+
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+    width: 2rem;
+    height: 2rem;
+    fill: var(--custom-dark-bg);
+}
+
+
+
+/* ===== SEÇÕES COM FUNDOS PERSONALIZADOS ===== */
+
+/* Seção Hero com fundo mais escuro para contraste */
+.hero-section {
+    background: linear-gradient(135deg, var(--custom-dark-bg) 0%, rgba(73, 90, 88, 0.8) 100%);
+    padding: 3rem 2rem;
+    margin: 2rem 0;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    color: white;
+}
+
+/* Texto da seção hero em branco para contraste */
+.hero-section h1 {
+    color: white !important;
+}
+
+.hero-section p,
+.hero-section em {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Checkmarks em cor accent para destaque */
+.hero-section .md-typeset :is(.emojione,.gemoji,.noto) {
+    color: var(--custom-accent);
+}
+
+/* Botão na seção hero com destaque e centralizado */
+.hero-section .md-button {
+    background-color: var(--custom-accent);
+    color: white;
+    border: 2px solid var(--custom-accent);
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(216, 173, 153, 0.3);
+    display: block;
+    margin: 2rem auto 0 auto;
+    width: fit-content;
+}
+
+.hero-section .md-button:hover {
+    background-color: white;
+    color: var(--custom-dark-bg);
+    border-color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Seção Sobre com fundo alternativo */
+.about-section {
+    background: rgba(216, 173, 153, 0.08);
+    padding: 3rem 2rem;
+    margin: 2rem 0;
+    border-radius: 20px;
+    border-left: 4px solid var(--custom-accent);
+}
+
+/* Admonitions com fundos mais destacados */
+.md-typeset .admonition.tip {
+    background: linear-gradient(135deg, rgba(216, 173, 153, 0.1) 0%, rgba(229, 227, 221, 0.2) 100%);
+    border: 1px solid rgba(216, 173, 153, 0.2);
+    box-shadow: 0 2px 10px rgba(216, 173, 153, 0.1);
+}
+
+.md-typeset .admonition.quote {
+    background: rgba(229, 227, 221, 0.7);
+    border: 1px solid var(--custom-accent);
+    box-shadow: 0 2px 10px rgba(216, 173, 153, 0.2);
+}
+
+/* Quotes dentro da seção de depoimentos com fundo mais forte */
+.testimonials-section .md-typeset .admonition.quote {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid var(--custom-accent);
+    box-shadow: 0 4px 15px rgba(216, 173, 153, 0.2);
+}
+
+.testimonials-section .md-typeset .admonition.quote .admonition-title {
+    background-color: var(--custom-accent);
+    color: white;
+    font-weight: 600;
+}
+
+.md-typeset .admonition.info {
+    background: linear-gradient(135deg, rgba(73, 90, 88, 0.08) 0%, rgba(229, 227, 221, 0.1) 100%);
+    border: 1px solid rgba(73, 90, 88, 0.2);
+    box-shadow: 0 2px 10px rgba(73, 90, 88, 0.1);
+}
+
+/* Seção de depoimentos com fundo mais contrastante */
+.testimonials-section {
+    background: linear-gradient(45deg, rgba(229, 227, 221, 0.6) 0%, rgba(216, 173, 153, 0.2) 100%);
+    padding: 3rem 2rem;
+    margin: 2rem 0;
+    border-radius: 20px;
+    position: relative;
+    border: 1px solid rgba(216, 173, 153, 0.3);
+}
+
+.testimonials-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--custom-accent), var(--custom-dark-bg), var(--custom-accent));
+    border-radius: 20px 20px 0 0;
+}
+
+/* Título da seção depoimentos com melhor contraste */
+.testimonials-section h2 {
+    color: var(--custom-dark-bg) !important;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+/* Seção de contato com destaque */
+.contact-section {
+    background: linear-gradient(135deg, var(--custom-dark-bg) 0%, rgba(73, 90, 88, 0.8) 100%);
+    color: white;
+    padding: 3rem 2rem;
+    margin: 2rem 0;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(73, 90, 88, 0.3);
+}
+
+.contact-section h2,
+.contact-section h3,
+.contact-section h4 {
+    color: white !important;
+}
+
+.contact-section .md-typeset a {
+    color: var(--custom-accent);
+    font-weight: 600;
+}
+
+.contact-section .md-typeset a:hover {
+    color: var(--custom-primary);
+}
