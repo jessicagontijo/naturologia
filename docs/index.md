@@ -51,7 +51,7 @@ Não quero romantizar: não é uma mudança fácil. Mas quanto mais **suporte** 
 
 Com a **abordagem adequada** e o auxílio de **ferramentas naturais**, é possível viver esse momento com mais **saúde**, **prazer** e **vitalidade**.
 
-[Saiba mais](#sobre){ .md-button }
+[Saiba mais](#sobre){ .md-button .md-button--primary }
 
 ---
 
