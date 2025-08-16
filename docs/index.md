@@ -147,4 +147,4 @@ CBO: 2263-20
 
 ---
 
-**_Uma abordagem natural e integral para viver a menopausa com mais equilíbrio, bem-estar e qualidade de vida._**
+**Uma abordagem natural e integral para viver a menopausa com mais equilíbrio, bem-estar e qualidade de vida.**
